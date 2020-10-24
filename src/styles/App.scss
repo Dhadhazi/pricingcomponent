@@ -1,0 +1,41 @@
+@import "_variables";
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15;
+  color: $gray;
+  background-color: $verylightgray;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  header {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .priceSwitcherBox {
+    color: $lightgray;
+    margin-bottom: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
