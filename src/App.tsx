@@ -9,7 +9,9 @@ function App() {
         <div>Annually</div> <div>SWITCHER</div>
         <div>Monthly</div>
       </div>
-      <div>Price boxes</div>
+      <div className="priceBoxContainer">
+        <div className="priceBoxMiddle">a</div>
+      </div>
       <div className="bg-top">
         <img src="bg-top.svg" alt="Background waves" />
       </div>

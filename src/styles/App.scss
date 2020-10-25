@@ -26,6 +26,23 @@ body {
   }
 }
 
+.priceBoxContainer {
+  position: relative;
+  width: 1050px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  .priceBoxMiddle {
+    position: absolute;
+    top: -25px;
+    left: 350px;
+    width: 350px;
+    height: 500px;
+    background-image: $gradient;
+  }
+}
+
 .bg-top {
   position: absolute;
   top: 0;
