@@ -33,13 +33,83 @@ body {
   background-color: white;
   border-radius: 10px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .priceBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 290px;
+    margin: 25px;
+    &.highlighted {
+      color: white;
+    }
+    > .type {
+      font-size: 20px;
+    }
+    > .price {
+      font-size: 60px;
+      color: $darkgray;
+      margin: 12px;
+    }
+    hr {
+      width: 100%;
+      border-top: 1px solid $verylightgray;
+      margin: 15px 0px;
+    }
+    button {
+      margin: 20px;
+      width: 100%;
+      height: 42px;
+      background-image: $gradient;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      color: $verylightgray;
+      letter-spacing: 2px;
+      font-weight: 700;
+      &:hover {
+        cursor: pointer;
+        background-image: none;
+        background-color: transparent;
+        color: rgb(117, 119, 202);
+        border: 1px solid black;
+      }
+    }
+    &.highlighted {
+      color: white;
+      > .price {
+        color: white;
+      }
+      hr {
+        opacity: 0.2;
+      }
+      button {
+        background-image: none;
+        background-color: white;
+        color: rgb(117, 119, 202);
+        &:hover {
+          background-color: transparent;
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+  }
   .priceBoxMiddle {
     position: absolute;
     top: -25px;
     left: 350px;
     width: 350px;
     height: 500px;
+    border-radius: 10px;
     background-image: $gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
