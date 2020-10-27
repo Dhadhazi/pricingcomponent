@@ -23,6 +23,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .switcher {
+      width: 55px;
+      height: 30px;
+      background-image: $gradient;
+      border-radius: 20px;
+      border: 2px solid $verylightgray;
+      svg {
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -75,7 +85,7 @@ body {
         cursor: pointer;
         background-image: none;
         background-color: transparent;
-        color: rgb(117, 119, 202);
+        color: $mypurple;
         border: 1px solid black;
       }
     }
@@ -90,7 +100,7 @@ body {
       button {
         background-image: none;
         background-color: white;
-        color: rgb(117, 119, 202);
+        color: $mypurple;
         &:hover {
           background-color: transparent;
           color: white;
