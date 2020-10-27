@@ -1,19 +1,15 @@
-import gsap from "gsap";
 import React, { useState } from "react";
 import { PricingBox } from "./components/PricingBox";
 import "./styles/App.scss";
 
 function App() {
   const [annually, setAnnually] = useState<boolean>(true);
-  var sliding = gsap.to(".switchCircle", { duration: 0.2, x: 24 });
+
   function setPricing() {
-    console.log("click");
     if (annually) {
-      sliding.play();
       setAnnually(false);
     } else {
-      sliding.restart();
-      setAnnually(false);
+      setAnnually(true);
     }
   }
 
@@ -29,7 +25,7 @@ function App() {
             className="switchCircle"
             onClick={() => setPricing()}
           >
-            <circle cx="15" cy="15" r="12" fill="white" />
+            <circle cx={annually ? "15" : "40"} cy="15" r="12" fill="white" />
           </svg>
         </div>
         <div>Monthly</div>
@@ -45,7 +41,7 @@ function App() {
         <div className="priceBoxMiddle">
           <PricingBox
             type="Professional"
-            price={annually ? "$249.99.99" : "$29.99"}
+            price={annually ? "$249.99" : "$29.99"}
             storage="1 TB"
             usernumber="5"
             sendDataGB="10"
